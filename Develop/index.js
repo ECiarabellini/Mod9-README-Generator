@@ -12,7 +12,7 @@ const questions = [
     {
         type: 'input',
         name: 'projectName',
-        message: 'What is your project name?',
+        message: 'What is your project name on GitHub?',
     },
     {
         type: 'input',
@@ -22,7 +22,7 @@ const questions = [
     {
         type: 'input',
         name: 'installation',
-        message: 'What are the steps required to install your project?',
+        message: 'What are the steps required to install your project, if any?',
     },
     {
         type: 'input',
@@ -47,15 +47,44 @@ const questions = [
 
 ];
 
+const generateREADME = ({ username, projectName, description, installation, usage, screenshotLocation, collaborators, license }) =>
+`# ${projectName}
+
+## Description
+${description}
+
+## Installation
+${installation}
+- [Repository on GitHub](https://github.com/${username}/${projectName})
+- [Webpage on GitHub Pages](https://${username}.github.io/${projectName}) //!!!! remove if not applicable!!!
+
+## Usage
+${usage}
+![screenshot](${screenshotLocation})
+
+## Credits
+${collaborators}
+
+## License
+${license}
+
+`;
+
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) =>
+        err ? console.log(err) : console.log('Successfully created READMEnew.md!'))
+}
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer
         .prompt(questions)
-        .then(writeToFile("README.md",data))
-}
+        .then((answers) => {
+            const readmeContent = generateREADME(answers);
+            writeToFile("READMEnew.md", readmeContent);
+        });
+};
 
 // Function call to initialize app
 init();
