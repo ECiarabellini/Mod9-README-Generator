@@ -1,6 +1,6 @@
 # Mod9-README-Generator
 
-![License Badge](https://badgen.net/static/license/ISC/blue)
+![License Badge](https://badgen.net/static/license/MIT/blue)
 
 ## Description
 This is a command-line application to generate a README.md file using the inquirer mdn package to ask for input from a user, then use that in the readme file
@@ -16,7 +16,6 @@ This is a command-line application to generate a README.md file using the inquir
 ## Installation
 Run node index from the command line within the file location
 - [Repository on GitHub](https://github.com/eciarabellini/Mod9-README-Generator)
-- [Webpage on GitHub Pages](https://eciarabellini.github.io/Mod9-README-Generator) //!!!! remove if not applicable!!!
 
 ## Usage
 Answer the questions and use the resulting README file
@@ -27,8 +26,7 @@ Answer the questions and use the resulting README file
 I used the Bootcamp Module 9 mini-project as a starting point and customized the code for this purpose.
 
 ## License
-ISC
+MIT
 
 ## Questions
 [GitHub Profile](https://github.com/eciarabellini)
-
