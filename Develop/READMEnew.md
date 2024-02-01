@@ -1,20 +1,34 @@
-# Mod9-README-Generator
+# fdsg
+
+![License Badge](https://badgen.net/static/license/MIT/blue)
 
 ## Description
-This is a command-line application to generate a README.md file using the inquirer mdn pacakage
+sgdf
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [Questions](#questions)
+
 
 ## Installation
-Run node index from the command line
-- [Repository on GitHub](https://github.com/eciarabellini/Mod9-README-Generator)
-- [Webpage on GitHub Pages](https://eciarabellini.github.io/Mod9-README-Generator)
+fds
+- [Repository on GitHub](https://github.com/fds/fdsg)
+- [Webpage on GitHub Pages](https://fds.github.io/fdsg) //!!!! remove if not applicable!!!
 
 ## Usage
-Run node index from the command line
-![screenshot](./screenshot.png)
+fds
+![screenshot](screenshot.png)
 
 ## Credits
-Used Module 9 mini-project as a starting point and customized for this purpose.
+me
 
 ## License
 MIT
+
+## Questions
+[GitHub Profile](https://github.com/fds)
+You may reach me by email at fds.
 

@@ -11,6 +11,11 @@ const questions = [
     },
     {
         type: 'input',
+        name: 'email',
+        message: 'What is your email address?',
+    },
+    {
+        type: 'input',
         name: 'projectName',
         message: 'What is your project name on GitHub?',
     },
@@ -40,18 +45,29 @@ const questions = [
         message: 'List your collaborators.',
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'license',
         message: 'Choose a license:',
+        choices: ['MIT', 'ISC', 'GNU-GPLv3'],
     },
 
 ];
 
-const generateREADME = ({ username, projectName, description, installation, usage, screenshotLocation, collaborators, license }) =>
+const generateREADME = ({ username, email, projectName, description, installation, usage, screenshotLocation, collaborators, license }) =>
 `# ${projectName}
+
+![License Badge](https://badgen.net/static/license/${license}/blue)
 
 ## Description
 ${description}
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [Questions](#questions)
+
 
 ## Installation
 ${installation}
@@ -68,6 +84,10 @@ ${collaborators}
 ## License
 ${license}
 
+## Questions
+[GitHub Profile](https://github.com/${username})
+You may reach me by email at ${email}.
+
 `;
 
 // TODO: Create a function to write README file
@@ -82,7 +102,7 @@ function init() {
         .prompt(questions)
         .then((answers) => {
             const readmeContent = generateREADME(answers);
-            writeToFile("READMEnew.md", readmeContent);
+            writeToFile("README.md", readmeContent);
         });
 };
 
